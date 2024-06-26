@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validación</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+    <center>
+        <form action="index2.html">
+            <h1>Formulario con Validación</h1><br><br>
+            <!-- Nombre de usuario -->
+            <label for="username" style="font-size: 25px;">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" pattern="^[a-zA-Z0-9]{5,15}$" title="Debe tener entre 5 y 15 caracteres alfanuméricos" required>
+            <br><br>
+    
+            <!-- Contraseña -->
+            <label for="password" style="font-size: 25px;">Contraseña:</label>
+            <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%\^&\*])[A-Za-z\d!@#\$%\^&\*]{8,}$" title="Debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una minúscula, un número y un carácter especial" required>
+            <br><br>
+    
+            <!-- Correo Electrónico -->
+            <label for="email" style="font-size: 25px;">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Debe ser una dirección de correo electrónico válida" required>
+            <br><br>
+    
+            <!-- Número de Teléfono -->
+            <label for="phone" style="font-size: 25px;">Número de Teléfono:</label>
+            <input type="tel" id="phone" name="phone" pattern="^\+[0-9]{1,15}$" title="Debe seguir el formato internacional, comenzando con el signo + y hasta 15 dígitos" required>
+            <br><br>
+    
+            <!-- Fecha de Nacimiento -->
+            <label for="dob" style="font-size: 25px;">Fecha de Nacimiento:</label>
+            <input type="date" id="dob" name="dob" pattern="^\d{4}-\d{2}-\d{2}$" title="Debe estar en el formato YYYY-MM-DD" required>
+            <br><br>
+    
+            <!-- Código Postal -->
+            <label for="zipcode"style="font-size: 25px;">Código Postal:</label>
+            <input type="text" id="zipcode" name="zipcode" pattern="^\d{5}$" title="Debe consistir en exactamente 5 dígitos" required>
+            <br><br>
+    
+            <button type="submit" class="button">Enviar</button>
+        </form>
+    </center>
+    
+</body>
+</html>
